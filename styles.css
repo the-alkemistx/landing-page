@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("background (1).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flexbox;
+  justify-content: center; /* Center horizontally */
+}
+
+header {
+  display: flex;
+  justify-content: center; /* center everything */
+  align-items: center;
+  margin-top: 20px; /* prevent crawling on the logo */
+}
+
+.navbar {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  margin-right: 10px;
+  position: absolute;
+  left: 20px;
+}
+
+.logo img {
+  height: auto;
+  max-width: 100%;
+}
+
+.nav-list {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  list-style-type: none;
+}
+
+.nav-list > li {
+  position: relative;
+  margin: 0 20px;
+}
+
+.nav-list > li::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px; /* Height of the bar */
+    background-color: white;
+    bottom: -5px; /* Adjust the position of the bar */
+    left: 0;
+    transition: width 0.3s ease-in-out; /* Transition for the animation */
+  }
+  
+  .nav-list > li:hover::after {
+    width: 100%; /* Expand the bar on hover */
+  }
+
+
+.nav-list > li > a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 10px 0;
+  display: block;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff00;
+  border-radius: 0.4em;
+  white-space: nowrap;
+  padding: 0;
+  top: 100%;
+  margin: 0;
+  left: 0;
+  list-style-type: none;
+}
+
+.nav-list > li:hover .sub-menu {
+  display: block;
+  padding: 0;
+  list-style-type: none;
+}
+
+.sub-menu > li {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.sub-menu > li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Height of the bar */
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out; /* Transition for the animation */
+}
+
+.sub-menu > li:hover::after {
+  width: 100%; /* Expand the bar on hover */
+}
+
+.sub-menu > li > a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px;
+  display: block;
+}
+
+.sub-menu > li > a:hover {
+  border-radius: 0.4em;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-top: 10%;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.spacer {
+  margin-top: 10px;
+}
+
+.para {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: 10px;
+  word-wrap: break-word;
+}
+
+.id-color {
+  color: #ff5733;
+}
+
+button {
+  background: #ff5733;
+  font-family: "Vina Sans", cursive;
+  padding: 4px 7px;
+  font-weight: 400;
+  font-size: 18px;
+  border: 3px solid black;
+  box-shadow: 0.1em 0.1em;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+/* Social Media Icons */
+.social-icons {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  padding: 10px 0;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 999; /* Ensure icons are on top of other content */
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #fff; /* Adjust color as needed */
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #ff5733; /* Change color on hover */
+}
